@@ -1,0 +1,36 @@
+part of swagger.api;
+
+class InlineResponse20076 {
+  
+  Versions data = null;
+
+  InlineResponse20076();
+
+  @override
+  String toString() {
+    return 'InlineResponse20076[data=$data, ]';
+  }
+
+  InlineResponse20076.fromJson(Map<String, dynamic> json) {
+    if (json == null) return;
+    data = new Versions.fromJson(json['data']);
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'data': data
+     };
+  }
+
+  static List<InlineResponse20076> listFromJson(List<dynamic> json) {
+    return json == null ? new List<InlineResponse20076>() : json.map((value) => new InlineResponse20076.fromJson(value)).toList();
+  }
+
+  static Map<String, InlineResponse20076> mapFromJson(Map<String, Map<String, dynamic>> json) {
+    var map = new Map<String, InlineResponse20076>();
+    if (json != null && json.length > 0) {
+      json.forEach((String key, Map<String, dynamic> value) => map[key] = new InlineResponse20076.fromJson(value));
+    }
+    return map;
+  }
+}
